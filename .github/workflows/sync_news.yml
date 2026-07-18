@@ -2,8 +2,8 @@ name: Scheduled Weekly News Sync
 
 on:
   schedule:
-    # Runs at 23:00 UTC every Sunday (6:00 PM EST)
-    - cron: '0 23 * * 0'
+    # Runs at 12:17 UTC every Sunday (7:17 AM CST / 8:17 AM EST)
+    - cron: '17 12 * * 0'
   workflow_dispatch: # Allows you to manually trigger it anytime via GitHub UI
 
 jobs:
@@ -11,13 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo content
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip'
 
       - name: Install dependencies
         run: pip install pandas
