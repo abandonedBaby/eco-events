@@ -9,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # Grant explicit write permissions to commit changes back to the repository
+    permissions:
+      contents: write
+      
     steps:
       - name: Check out repo content
         uses: actions/checkout@v4
