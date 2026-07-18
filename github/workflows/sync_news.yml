@@ -3,7 +3,7 @@ name: Scheduled Weekly News Sync
 on:
   schedule:
     # Runs at 23:00 UTC every Sunday (6:00 PM EST)
-    - cron: '0 12 * * 0'
+    - cron: '17 12 * * 0'
   workflow_dispatch: # Allows you to manually trigger it anytime via GitHub UI
 
 jobs:
